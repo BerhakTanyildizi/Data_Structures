@@ -13,12 +13,6 @@ This repository contains hands‑on exercises and example programs that explore 
 - **Pop_push_in_stack.c / Pop_push_in_stack.exe**  
   Demonstrates push (insert) and pop (remove) operations on a stack data structure.
 
-- **LINKED_LIST.txt**  
-  Notes and explanations about linked‑list concepts.
-
-- **LINKED_LIST_CALISMA.png**  
-  A hand‑drawn or schematic illustration of a linked list.
-
 ## Purpose
 
 The files in this repo are designed to help you:
