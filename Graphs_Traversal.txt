@@ -1,0 +1,2 @@
+
+Breadth First Search (BFS):Breadth First Search traversal works this way by putting all adjacent vertices in a queue (if they are not already visited), and then using the queue to visit the next vertex.

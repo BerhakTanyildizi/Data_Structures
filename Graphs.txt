@@ -1,0 +1,40 @@
+Grafik, köşelerden (düğümlerden) ve kenarlardan oluşan doğrusal olmayan bir veri yapısıdır.
+
+Köşe, düğüm olarak da adlandırılır, Grafikteki bir nokta veya nesnedir ve bir kenar, iki köşeyi birbirine bağlamak için kullanılır.
+
+Grafikler doğrusal değildir çünkü veri yapısı, Diziler veya Bağlı Listeler gibi doğrusal veri yapılarından farklı olarak, bir köşeden diğerine gitmek için farklı yollar kullanmamıza olanak tanır.
+
+Grafikler, verilerin nesnelerden ve bunlar arasındaki ilişkilerden oluştuğu sorunları temsil etmek ve çözmek için kullanılır, örneğin:
+
+Sosyal Ağlar: Her insan bir tepe noktasıdır ve ilişkiler (arkadaşlıklar gibi) kenarlardır. Algoritmalar potansiyel arkadaşlar önerebilir.
+Haritalar ve Navigasyon: Bir kasaba veya otobüs durakları gibi konumlar köşeler olarak depolanır ve yollar kenarlar olarak depolanır. Algoritmalar, bir Grafik olarak depolandığında iki konum arasındaki en kısa rotayı bulabilir.
+
+A weighted Graph is a Graph where the edges have values. The weight value of an edge can represent things like distance, capacity, time, or probability.
+
+A connected Graph is when all the vertices are connected through edges somehow. A Graph that is not connected, is a Graph with isolated (disjoint) subgraphs, or single isolated vertices.
+
+A directed Graph, also known as a digraph, is when the edges between the vertex pairs have a direction. The direction of an edge can represent things like hierarchy or flow.
+A cyclic Graph is defined differently depending on whether it is directed or not:
+
+A directed cyclic Graph is when you can follow a path along the directed edges that goes in circles. Removing the directed edge from F to G in the animation above makes the directed Graph not cyclic anymore.
+An undirected cyclic Graph is when you can come back to the same vertex you started at without using the same edge more than once. The undirected Graph above is cyclic because we can start and end up in vertes C without using the same edge twice.
+A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop is a cycle that only consists of one edge. By adding the loop on vertex A in the animation above, the Graph becomes cyclic.
+
+The weights are placed directly into the adjacency matrix for the correct edge, and for a directed Graph, the adjacency matrix does not have to be symmetric.
+
+Adjacency List Graph Representation:
+
+
+In case we have a 'sparse' Graph with many vertices, we can save space by using an Adjacency List compared to using an Adjacency Matrix, because an Adjacency Matrix would reserve a lot of memory on empty Array elements for edges that don't exist.
+
+A 'sparse' Graph is a Graph where each vertex only has edges to a small portion of the other vertices in the Graph.
+
+An Adjacency List has an array that contains all the vertices in the Graph, and each vertex has a Linked List (or Array) with the vertex's edges.Each vertex in the Array has a pointer to a Linked List that represents that vertex's edges. More specifically, the Linked List contains the indexes to the adjacent (neighbor) vertices
+
+ Each vertex has a pointer to a Linked List with edges stored as i,w, where i is the index of the vertex the edge goes to, and w is the weight of that edge.
+
+Node D for example, has a pointer to a Linked List with an edge to vertex A. The values 0,4 means that vertex D has an edge to vertex on index 0 (vertex A), and the weight of that edge is 4.
+
+
+
+
