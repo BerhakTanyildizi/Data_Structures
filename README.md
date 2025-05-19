@@ -26,4 +26,4 @@ The files in this repo are designed to help you:
 Clone the project to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/Data_Structures.git
+git clone https://github.com/BerhakTanyildizi/Data_Structures.git
