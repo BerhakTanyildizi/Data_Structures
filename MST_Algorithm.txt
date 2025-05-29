@@ -1,0 +1,24 @@
+Bir köye elektrik verildikten sonra, elektrik kabloları o köyden diğerlerine döşenmelidir. 
+Köyler birçok farklı şekilde bağlanabilir ve her rotanın farklı bir maliyeti vardır.
+
+Elektrik kabloları pahalıdır ve kablolar için hendek kazmak veya kabloları havaya germek de pahalıdır.
+ Arazi kesinlikle zorlu olabilir ve daha sonra kabloların nerede bittiğine bağlı olarak farklı bir bakım maliyeti olabilir.
+
+Tüm bu rota maliyetleri bir grafikte kenar ağırlıkları olarak hesaba katılabilir.
+ Her tepe noktası bir köyü temsil eder ve her kenar iki köy arasındaki elektrik kablosu için olası bir rotayı temsil eder.
+
+Böyle bir grafik oluşturulduktan sonra Minimum Spanning Tree (MST) bulunabilecek 
+ve bu köylerin elektrik şebekesine bağlanmasının en etkili yolu bu olacak.
+
+Ve aslında ilk MST algoritması (Borůvka algoritması) 1926 yılında tam da bu amaçla yapılmıştı:
+Çek Cumhuriyeti'ndeki tarihi Moravya bölgesini elektrik şebekesine bağlamanın en iyi yolunu bulmak.
+
+Bu algoritmayı Prim's ve Kruskal's olarak 2'ye ayıracağım:
+
+PRIM ALGORITHM:
+
+Prim algoritması 1930 yılında Çek matematikçi Vojtěch Jarník tarafından bulunmuştur.
+Step-1: Initially, select any point to start building the tree. 
+Step-2: Select the smallest weighted edge accessible through the tree created so far that has not already been joined to the tree to add it to the tree. 
+Step-3: If adding this edge to the tree does not result in the formation of a circle, add it to the tree. 
+Step-4: Go back to step 2 until the number of edges in the tree reaches (N-1). 
